@@ -1,0 +1,33 @@
+version 3
+run General-0-20250225-12:15:54-11601
+attr configname General
+attr datetime 20250225-12:15:54
+attr datetimef 20250225-121554
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Network1
+attr processid 11601
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../../omnetpp-6.1.0/samples/inet/images
+config network Network1
+config sim-time-limit 5000ms
+config **.switch.maxPackets 2
+
+par Network1.source2.out.channel typename "\"ned.IdealChannel\""
+par Network1.source1 typename "\"test_project.network1.Source\""
+par Network1.source2 typename "\"test_project.network1.Source\""
+par Network1.switch typename "\"test_project.network1.Switch\""
+par Network1.switch maxPackets 2
+par Network1.dest1 typename "\"test_project.network1.Destination\""
+par Network1.dest2 typename "\"test_project.network1.Destination\""
+par Network1.dest3 typename "\"test_project.network1.Destination\""
+par Network1 typename "\"test_project.network1.Network1\""
+

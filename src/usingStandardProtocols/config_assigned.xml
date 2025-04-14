@@ -1,0 +1,88 @@
+<config>
+   <interface hosts="FishTopology.centralRouter" names="eth0" address="10.0.0.1" netmask="255.255.255.252" metric="20"/>
+   <interface hosts="FishTopology.router1" names="eth0" address="10.0.0.2" netmask="255.255.255.252" metric="20"/>
+   <interface hosts="FishTopology.centralRouter" names="eth1" address="10.0.0.5" netmask="255.255.255.252" metric="20"/>
+   <interface hosts="FishTopology.router2" names="eth0" address="10.0.0.6" netmask="255.255.255.252" metric="20"/>
+   <interface hosts="FishTopology.centralRouter" names="eth2" address="10.0.0.9" netmask="255.255.255.252" metric="20"/>
+   <interface hosts="FishTopology.server1" names="eth0" address="10.0.0.10" netmask="255.255.255.252" metric="20"/>
+   <interface hosts="FishTopology.centralRouter" names="eth3" address="10.0.0.13" netmask="255.255.255.252" metric="20"/>
+   <interface hosts="FishTopology.server2" names="eth0" address="10.0.0.14" netmask="255.255.255.252" metric="20"/>
+   <interface hosts="FishTopology.router1" names="eth1" address="10.0.0.17" netmask="255.255.255.252" metric="200"/>
+   <interface hosts="FishTopology.router3" names="eth0" address="10.0.0.18" netmask="255.255.255.252" metric="200"/>
+   <interface hosts="FishTopology.router2" names="eth1" address="10.0.0.21" netmask="255.255.255.252" metric="200"/>
+   <interface hosts="FishTopology.router3" names="eth1" address="10.0.0.22" netmask="255.255.255.252" metric="200"/>
+   <interface hosts="FishTopology.router3" names="eth2" address="10.0.0.25" netmask="255.255.255.252" metric="20"/>
+   <interface hosts="FishTopology.client1" names="eth0" address="10.0.0.26" netmask="255.255.255.252" metric="20"/>
+   <interface hosts="FishTopology.router3" names="eth3" address="10.0.0.29" netmask="255.255.255.252" metric="20"/>
+   <interface hosts="FishTopology.client2" names="eth0" address="10.0.0.30" netmask="255.255.255.252" metric="20"/>
+   <multicast-group hosts="FishTopology.centralRouter" interfaces="eth0" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="FishTopology.router1" interfaces="eth0" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="FishTopology.centralRouter" interfaces="eth1" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="FishTopology.router2" interfaces="eth0" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="FishTopology.centralRouter" interfaces="eth2" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="FishTopology.server1" interfaces="eth0" address="224.0.0.1"/>
+   <multicast-group hosts="FishTopology.centralRouter" interfaces="eth3" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="FishTopology.server2" interfaces="eth0" address="224.0.0.1"/>
+   <multicast-group hosts="FishTopology.router1" interfaces="eth1" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="FishTopology.router3" interfaces="eth0" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="FishTopology.router2" interfaces="eth1" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="FishTopology.router3" interfaces="eth1" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="FishTopology.router3" interfaces="eth2" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="FishTopology.client1" interfaces="eth0" address="224.0.0.1"/>
+   <multicast-group hosts="FishTopology.router3" interfaces="eth3" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="FishTopology.client2" interfaces="eth0" address="224.0.0.1"/>
+   <route hosts="FishTopology.centralRouter" destination="10.0.0.2" netmask="255.255.255.255" gateway="*" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.centralRouter" destination="10.0.0.6" netmask="255.255.255.255" gateway="*" interface="eth1" metric="0"/>
+   <route hosts="FishTopology.centralRouter" destination="10.0.0.21" netmask="255.255.255.255" gateway="10.0.0.6" interface="eth1" metric="0"/>
+   <route hosts="FishTopology.centralRouter" destination="10.0.0.0" netmask="255.255.255.252" gateway="*" interface="eth0" metric="20"/>
+   <route hosts="FishTopology.centralRouter" destination="10.0.0.4" netmask="255.255.255.252" gateway="*" interface="eth1" metric="20"/>
+   <route hosts="FishTopology.centralRouter" destination="10.0.0.8" netmask="255.255.255.252" gateway="*" interface="eth2" metric="0"/>
+   <route hosts="FishTopology.centralRouter" destination="10.0.0.8" netmask="255.255.255.252" gateway="*" interface="eth2" metric="20"/>
+   <route hosts="FishTopology.centralRouter" destination="10.0.0.12" netmask="255.255.255.252" gateway="*" interface="eth3" metric="0"/>
+   <route hosts="FishTopology.centralRouter" destination="10.0.0.12" netmask="255.255.255.252" gateway="*" interface="eth3" metric="20"/>
+   <route hosts="FishTopology.centralRouter" destination="10.0.0.16" netmask="255.255.255.240" gateway="10.0.0.2" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.centralRouter" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="FishTopology.router1" destination="10.0.0.1" netmask="255.255.255.255" gateway="*" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.router1" destination="10.0.0.18" netmask="255.255.255.255" gateway="*" interface="eth1" metric="0"/>
+   <route hosts="FishTopology.router1" destination="10.0.0.21" netmask="255.255.255.255" gateway="10.0.0.1" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.router1" destination="10.0.0.0" netmask="255.255.255.252" gateway="*" interface="eth0" metric="20"/>
+   <route hosts="FishTopology.router1" destination="10.0.0.16" netmask="255.255.255.252" gateway="*" interface="eth1" metric="200"/>
+   <route hosts="FishTopology.router1" destination="10.0.0.0" netmask="255.255.255.240" gateway="10.0.0.1" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.router1" destination="10.0.0.16" netmask="255.255.255.240" gateway="10.0.0.18" interface="eth1" metric="0"/>
+   <route hosts="FishTopology.router1" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="FishTopology.router2" destination="10.0.0.5" netmask="255.255.255.255" gateway="*" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.router2" destination="10.0.0.17" netmask="255.255.255.255" gateway="10.0.0.5" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.router2" destination="10.0.0.22" netmask="255.255.255.255" gateway="*" interface="eth1" metric="0"/>
+   <route hosts="FishTopology.router2" destination="10.0.0.4" netmask="255.255.255.252" gateway="*" interface="eth0" metric="20"/>
+   <route hosts="FishTopology.router2" destination="10.0.0.20" netmask="255.255.255.252" gateway="*" interface="eth1" metric="200"/>
+   <route hosts="FishTopology.router2" destination="10.0.0.0" netmask="255.255.255.240" gateway="10.0.0.5" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.router2" destination="10.0.0.16" netmask="255.255.255.240" gateway="10.0.0.22" interface="eth1" metric="0"/>
+   <route hosts="FishTopology.router2" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="FishTopology.router3" destination="10.0.0.6" netmask="255.255.255.255" gateway="10.0.0.21" interface="eth1" metric="0"/>
+   <route hosts="FishTopology.router3" destination="10.0.0.17" netmask="255.255.255.255" gateway="*" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.router3" destination="10.0.0.21" netmask="255.255.255.255" gateway="*" interface="eth1" metric="0"/>
+   <route hosts="FishTopology.router3" destination="10.0.0.16" netmask="255.255.255.252" gateway="*" interface="eth0" metric="200"/>
+   <route hosts="FishTopology.router3" destination="10.0.0.20" netmask="255.255.255.252" gateway="*" interface="eth1" metric="200"/>
+   <route hosts="FishTopology.router3" destination="10.0.0.24" netmask="255.255.255.252" gateway="*" interface="eth2" metric="0"/>
+   <route hosts="FishTopology.router3" destination="10.0.0.24" netmask="255.255.255.252" gateway="*" interface="eth2" metric="20"/>
+   <route hosts="FishTopology.router3" destination="10.0.0.28" netmask="255.255.255.252" gateway="*" interface="eth3" metric="0"/>
+   <route hosts="FishTopology.router3" destination="10.0.0.28" netmask="255.255.255.252" gateway="*" interface="eth3" metric="20"/>
+   <route hosts="FishTopology.router3" destination="10.0.0.0" netmask="255.255.255.240" gateway="10.0.0.17" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.router3" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="FishTopology.server1" destination="10.0.0.8" netmask="255.255.255.252" gateway="*" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.server1" destination="10.0.0.8" netmask="255.255.255.252" gateway="*" interface="eth0" metric="20"/>
+   <route hosts="FishTopology.server1" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="FishTopology.server1" destination="*" netmask="*" gateway="10.0.0.9" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.client1" destination="10.0.0.24" netmask="255.255.255.252" gateway="*" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.client1" destination="10.0.0.24" netmask="255.255.255.252" gateway="*" interface="eth0" metric="20"/>
+   <route hosts="FishTopology.client1" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="FishTopology.client1" destination="*" netmask="*" gateway="10.0.0.25" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.client2" destination="10.0.0.28" netmask="255.255.255.252" gateway="*" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.client2" destination="10.0.0.28" netmask="255.255.255.252" gateway="*" interface="eth0" metric="20"/>
+   <route hosts="FishTopology.client2" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="FishTopology.client2" destination="*" netmask="*" gateway="10.0.0.29" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.server2" destination="10.0.0.12" netmask="255.255.255.252" gateway="*" interface="eth0" metric="0"/>
+   <route hosts="FishTopology.server2" destination="10.0.0.12" netmask="255.255.255.252" gateway="*" interface="eth0" metric="20"/>
+   <route hosts="FishTopology.server2" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="FishTopology.server2" destination="*" netmask="*" gateway="10.0.0.13" interface="eth0" metric="0"/>
+</config>

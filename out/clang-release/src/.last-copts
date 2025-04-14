@@ -1,0 +1,1 @@
+-O3 -DNDEBUG=1 -g1 -ffp-contract=off -Wno-string-plus-int   -MMD -MP -MF .d  -fPIC  -Wno-deprecated-register -Wno-unused-function -fno-omit-frame-pointer  -DOMNETPPLIBS_IMPORT   -I/mnt/c/Users/Admin/OneDrive/Desktop/omnetpp_test/omnetpp-6.1.0/include

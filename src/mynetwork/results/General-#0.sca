@@ -1,0 +1,44 @@
+version 3
+run General-0-20250208-16:46:31-91111
+attr configname General
+attr datetime 20250208-16:46:31
+attr datetimef 20250208-164631
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network MyNetwork
+attr processid 91111
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network MyNetwork
+config sim-time-limit 500ms
+
+par MyNetwork.node1.out.channel typename "\"ned.DelayChannel\""
+par MyNetwork.node1.out.channel disabled false
+attr mutable ""
+par MyNetwork.node1.out.channel delay 0.05s
+attr mutable ""
+attr unit s
+par MyNetwork.node2.out.channel typename "\"ned.DelayChannel\""
+par MyNetwork.node2.out.channel disabled false
+attr mutable ""
+par MyNetwork.node2.out.channel delay 0.1s
+attr mutable ""
+attr unit s
+par MyNetwork.node3.out.channel typename "\"ned.DelayChannel\""
+par MyNetwork.node3.out.channel disabled false
+attr mutable ""
+par MyNetwork.node3.out.channel delay 0.15s
+attr mutable ""
+attr unit s
+par MyNetwork.node1 typename "\"test_project.mynetwork.Node\""
+par MyNetwork.node2 typename "\"test_project.mynetwork.Node\""
+par MyNetwork.node3 typename "\"test_project.mynetwork.Node\""
+par MyNetwork typename "\"test_project.mynetwork.MyNetwork\""
+
